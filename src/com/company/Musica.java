@@ -1,18 +1,9 @@
 package com.company;
 
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javazoom.jl.decoder.JavaLayerException;
-import javazoom.jl.player.Player;
-
 import javax.sound.sampled.*;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.List;
+
 import java.util.Scanner;
 
 public class Musica {
@@ -21,7 +12,6 @@ public class Musica {
     String nomeMusica = "";
     File file;
     Clip clip;
-    Player player;
 
     String diretorio = System.getProperty("user.dir") + "\\src\\com\\company\\musica";
     String diretorioMediaPlayer;
@@ -53,7 +43,7 @@ public class Musica {
         return respostaMusica = scanner.next();
     }
 
-    public void playMusic() throws IOException, UnsupportedAudioFileException, LineUnavailableException, JavaLayerException {
+    public void playMusic() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         while (!resposta.equals("Q")) {
             System.out.println("========================================================================");
             System.out.println("|| P = Play  S = Stop   R = Reset    T = Trocar de musica    Q = Quit ||");
@@ -89,7 +79,7 @@ public class Musica {
         }
     }
 
-    public void selecionarMusica(String respostaMusica) throws IOException, UnsupportedAudioFileException, LineUnavailableException, JavaLayerException {
+    public void selecionarMusica(String respostaMusica) throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         switch (respostaMusica) {
 
             case ("1"):
@@ -119,7 +109,7 @@ public class Musica {
 
     }
 
-    public void play() throws IOException, LineUnavailableException, JavaLayerException, UnsupportedAudioFileException {
+    public void play() throws IOException, LineUnavailableException {
         clip.open(getAudioStream());
         clip.start();
     }
