@@ -85,21 +85,21 @@ public class Musica {
             case ("1"):
                 setNomeMusica(files[0].getName());
                 setFile(new File(diretorio + "/" + getNomeMusica()));
-                pegarExtensao = files[0].getName().trim().split("\\.");
+//                pegarExtensao = files[0].getName().trim().split("\\.");
                 audioStream = AudioSystem.getAudioInputStream(getFile());
                 clip = AudioSystem.getClip();
                 break;
             case ("2"):
                 setNomeMusica(files[1].getName());
                 setFile(new File(diretorio + "/" + getNomeMusica()));
-                pegarExtensao = files[1].getName().trim().split("\\.");
+//                pegarExtensao = files[1].getName().trim().split("\\.");
                 audioStream = AudioSystem.getAudioInputStream(getFile());
                 clip = AudioSystem.getClip();
                 break;
             case ("3"):
                 setNomeMusica(files[2].getName());
                 setFile(new File(diretorio + "/" + getNomeMusica()));
-                pegarExtensao = files[2].getName().trim().split("\\.");
+//                pegarExtensao = files[2].getName().trim().split("\\.");
                 audioStream = AudioSystem.getAudioInputStream(getFile());
                 clip = AudioSystem.getClip();
                 break;
